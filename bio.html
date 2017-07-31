@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html>
+
+	<head>
+		<title>Biometric Dapp</title>	
+		<link rel="stylesheet" type="text/css" href="bio.css">
+		<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="bio.js"></script>
+		<!--<script src="http://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>-->
+	</head>
+	<body>
+		<div class="header">
+			<h1 id="head1">Biometric Verification System</h1>
+		</div>
+	  	
+		<div class="menu">
+			<ul>
+				<li id="l1"><a id="a1" onclick="showVerify(); cleared();" class="active" href="#home">Verify</a></li>
+				<li id="l2"><a id="a2" onclick="showEnroll(); cleared();" href="#news">Enroll</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<div>
+				<p class="para" id="para1">Fingerprint:</p>
+				<input id="input1" class="para" onchange="encodeImageFileAsURL(this)" type="file" name="datafile" size="40">
+				<br><br>
+				<p class="para" id="para2">Retina:</p>
+				<input id="input2" class="para" onchange="encodeImageFileAsURL(this)" type="file" name="datafile" size="40">
+				<br><br>
+				<p class="para" id="para3">Iris:</p>
+				<input id="input3" class="para" onchange="encodeImageFileAsURL(this)" type="file" name="datafile" size="40">
+			</div>
+			<br><br>
+			<div id="verify">
+				<button onclick="cleared();" class="button">Clear</button>
+				<button onclick="verify();" class="button">Verify</button>
+			</div>
+			<div id="enroll">
+				<button onclick="cleared();" class="button">Clear</button>
+				<button onclick="enroll();" class="button">Enroll</button>
+			</div>
+		</div>
+	</body>	
+</html>
